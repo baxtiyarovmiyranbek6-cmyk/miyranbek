@@ -1,0 +1,331 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Miyranbek Baxtiyarov</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=IBM+Plex+Mono:wght@400;500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: vizitka. Left: name wall in condensed type. Right: a paused video player with chapter markers. Below: contact rows. */
+:root {
+  --bg: #ECEEF2;
+  --surface: #F7F8FA;
+  --fg: #10131A;
+  --muted: #566073;
+  --line: #CBD1DC;
+  --accent: #D5171D;
+  --accent-ink: #FFFFFF;
+  --accent-text: #BF1218;
+  --screen: #11141B;
+  --screen-2: #1B212C;
+  --screen-fg: #F1F3F8;
+  --screen-muted: #97A0B2;
+  --font-display: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Instrument Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0B0E14;
+    --surface: #131822;
+    --fg: #EDF0F6;
+    --muted: #98A2B6;
+    --line: #242D3E;
+    --accent: #E5242A;
+    --accent-text: #FF6A6E;
+    --screen: #06080D;
+    --screen-2: #121822;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0B0E14;
+  --surface: #131822;
+  --fg: #EDF0F6;
+  --muted: #98A2B6;
+  --line: #242D3E;
+  --accent: #E5242A;
+  --accent-text: #FF6A6E;
+  --screen: #06080D;
+  --screen-2: #121822;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  padding-block: 16px 28px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+:focus-visible { outline: 2px solid var(--accent-text); outline-offset: 3px; }
+
+/* header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 6px; margin-bottom: clamp(28px, 6vw, 56px); }
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.mark { display: grid; place-items: center; width: 40px; height: 40px; background: var(--fg); color: var(--bg); font-family: var(--font-display); font-weight: 900; font-size: 22px; letter-spacing: .02em; border-radius: 4px; flex: none; }
+.brand-label { font-family: var(--font-mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.theme { display: grid; place-items: center; width: 44px; height: 44px; background: transparent; color: var(--fg); border: 1px solid var(--line); border-radius: 6px; cursor: pointer; }
+.theme:hover { border-color: var(--fg); }
+.theme svg { width: 20px; height: 20px; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 64px); align-items: center; }
+.role { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.role i { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); display: block; }
+h1 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; line-height: .86; letter-spacing: .004em; font-size: clamp(3.4rem, 8vw, 6.2rem); margin: 18px 0 20px; text-wrap: balance; }
+h1 span { display: block; }
+.legal { display: grid; gap: 4px; padding-top: 16px; border-top: 1px solid var(--line); max-width: 460px; }
+.legal small { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.legal b { font-family: var(--font-mono); font-weight: 500; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; overflow-wrap: anywhere; }
+.lede { max-width: 44ch; color: var(--muted); font-size: 1.0625rem; margin: 22px 0 28px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border-radius: 6px; border: 1px solid var(--line); background: transparent; color: var(--fg); font: 600 15px/1 var(--font-body); text-decoration: none; cursor: pointer; }
+.btn:hover { border-color: var(--fg); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn svg { width: 16px; height: 16px; flex: none; }
+
+/* player */
+.player { position: relative; display: grid; grid-template-rows: auto 1fr auto; min-width: 0; max-width: 100%; aspect-ratio: 16 / 9; padding: 14px 16px; overflow: hidden; border-radius: 12px; border: 1px solid var(--line);
+  color: var(--screen-fg);
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 4px),
+    radial-gradient(120% 100% at 75% 10%, var(--screen-2), var(--screen)); }
+.player::after { content: "MB"; position: absolute; right: 10px; bottom: 36px; font-family: var(--font-display); font-weight: 900; font-size: clamp(5rem, 14vw, 9rem); line-height: .8; color: rgba(255,255,255,.05); pointer-events: none; }
+.p-top { display: flex; justify-content: space-between; align-items: center; font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--screen-muted); position: relative; z-index: 1; }
+.p-top .live { display: inline-flex; align-items: center; gap: 8px; color: var(--screen-fg); }
+.p-top .live i { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); display: block; }
+.play { justify-self: center; align-self: center; display: grid; place-items: center; width: 64px; height: 64px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; position: relative; z-index: 1; transition: transform .15s ease; }
+.play:hover:not(:disabled) { transform: scale(1.06); }
+.play:disabled { cursor: default; }
+.play svg { width: 26px; height: 26px; }
+.p-bottom { display: grid; gap: 8px; position: relative; z-index: 1; }
+.p-title { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.p-title b { font-family: var(--font-display); font-weight: 800; text-transform: uppercase; font-size: clamp(1.05rem, 2.4vw, 1.4rem); line-height: 1; letter-spacing: .02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.tc { font-family: var(--font-mono); font-size: 11px; color: var(--screen-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.track, .chapters { display: flex; gap: 3px; }
+.track { height: 6px; }
+.seg { flex: 1 1 0; background: rgba(255,255,255,.2); border-radius: 2px; overflow: hidden; }
+.seg span { display: block; height: 100%; width: 0; background: var(--accent); }
+.chapters span { font-family: var(--font-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--screen-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* contact */
+.contact { margin-top: clamp(48px, 9vw, 96px); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: clamp(24px, 5vw, 64px); align-items: start; }
+.contact h2 { font-family: var(--font-display); font-weight: 900; text-transform: uppercase; font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: .9; margin: 0 0 12px; }
+.contact p { margin: 0; color: var(--muted); max-width: 38ch; }
+.rows { list-style: none; margin: 0; padding: 0; min-width: 0; border-bottom: 1px solid var(--line); }
+.row { display: grid; gap: 10px; padding-block: 22px; border-top: 1px solid var(--line); }
+.lbl { font-family: var(--font-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.val { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.5rem, 4.4vw, 2.6rem); line-height: 1.05; letter-spacing: .01em; overflow-wrap: anywhere; user-select: all; }
+.acts { display: flex; flex-wrap: wrap; gap: 10px; }
+
+footer { margin-top: clamp(40px, 8vw, 80px); padding-top: 16px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; letter-spacing: .06em; color: var(--muted); }
+
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); max-width: calc(100% - 32px); background: var(--fg); color: var(--bg); padding: 12px 18px; border-radius: 6px; font-size: 14px; font-weight: 500; z-index: 20; }
+
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; }
+  h1 { font-size: clamp(3.4rem, 15vw, 7rem); }
+  .contact { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .play { transition: none; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <div class="mark" aria-hidden="true">MB</div>
+      <span class="brand-label">Vizitka</span>
+    </div>
+    <button class="theme" id="theme" type="button" aria-label="Mavzuni almashtirish">
+      <svg id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      <svg id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="name">
+      <div>
+        <div class="role"><i></i>YouTuber</div>
+        <h1 id="name"><span>Miyranbek</span><span>Baxtiyarov</span></h1>
+        <div class="legal">
+          <small>To‘liq ism</small>
+          <b>Baxtiyarov Miyranbek Romanovich</b>
+        </div>
+        <p class="lede">Videolar yarataman, yangi g‘oyalar ustida ishlayman va hamkorlikka ochiqman.</p>
+        <div class="cta">
+          <a class="btn primary" href="#boglanish">
+            Bog‘lanish
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="player" role="group" aria-label="Video pleyer ko‘rinishidagi bezak">
+        <div class="p-top"><span class="live"><i></i>Kanal</span><span>16:9</span></div>
+        <button class="play" id="play" type="button" aria-label="Pleyerni ishga tushirish">
+          <svg id="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg>
+          <svg id="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" hidden><rect x="6" y="5" width="4.5" height="14" rx="1"/><rect x="13.5" y="5" width="4.5" height="14" rx="1"/></svg>
+        </button>
+        <div class="p-bottom">
+          <div class="p-title"><b>Miyranbek Baxtiyarov</b><span class="tc" id="tc">01:16 / 03:20</span></div>
+          <div class="track" aria-hidden="true"><div class="seg" style="flex:22"><span></span></div><div class="seg" style="flex:46"><span></span></div><div class="seg" style="flex:32"><span></span></div></div>
+          <div class="chapters" aria-hidden="true"><span style="flex:22">Salom</span><span style="flex:46">Videolar</span><span style="flex:32">Hamkorlik</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="boglanish" aria-labelledby="c-h">
+      <div>
+        <h2 id="c-h">Hamkorlik uchun</h2>
+        <p>Reklama, integratsiya va hamkorlik takliflari uchun to‘g‘ridan-to‘g‘ri yozing yoki qo‘ng‘iroq qiling.</p>
+      </div>
+      <ul class="rows">
+        <li class="row">
+          <span class="lbl">Telefon</span>
+          <span class="val" id="phone">+998 99 453 26 67</span>
+          <div class="acts">
+            <a class="btn" href="tel:+998994532667">Qo‘ng‘iroq qilish</a>
+            <button class="btn" type="button" data-copy="+998994532667" data-target="phone">Nusxalash</button>
+          </div>
+        </li>
+        <li class="row">
+          <span class="lbl">Elektron pochta</span>
+          <span class="val" id="mail">baxtiyarovmiyranbek@gmail.com</span>
+          <div class="acts">
+            <a class="btn" href="mailto:baxtiyarovmiyranbek@gmail.com">Xat yozish</a>
+            <button class="btn" type="button" data-copy="baxtiyarovmiyranbek@gmail.com" data-target="mail">Nusxalash</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Miyranbek Baxtiyarov</span>
+    <span>YouTuber</span>
+  </footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+
+  /* theme toggle */
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  var themeBtn = document.getElementById('theme');
+  var moon = document.getElementById('i-moon');
+  var sun = document.getElementById('i-sun');
+  function isDark() {
+    var t = root.getAttribute('data-theme');
+    return t ? t === 'dark' : mq.matches;
+  }
+  function syncTheme() {
+    var d = isDark();
+    moon.hidden = d;
+    sun.hidden = !d;
+  }
+  themeBtn.addEventListener('click', function () {
+    root.setAttribute('data-theme', isDark() ? 'light' : 'dark');
+    syncTheme();
+  });
+  if (mq.addEventListener) mq.addEventListener('change', syncTheme);
+  new MutationObserver(syncTheme).observe(root, { attributes: true, attributeFilter: ['data-theme'] });
+  syncTheme();
+
+  /* decorative player */
+  var weights = [22, 46, 32];
+  var total = 200;
+  var p = 0.38;
+  var playing = false;
+  var last = 0;
+  var fills = document.querySelectorAll('.seg span');
+  var tc = document.getElementById('tc');
+  var playBtn = document.getElementById('play');
+  var iPlay = document.getElementById('i-play');
+  var iPause = document.getElementById('i-pause');
+  function fmt(s) {
+    s = Math.floor(s);
+    var m = Math.floor(s / 60), r = s % 60;
+    return (m < 10 ? '0' : '') + m + ':' + (r < 10 ? '0' : '') + r;
+  }
+  function render() {
+    var acc = 0;
+    for (var i = 0; i < fills.length; i++) {
+      var s = acc / 100, e = (acc + weights[i]) / 100;
+      var w = Math.max(0, Math.min(1, (p - s) / (e - s)));
+      fills[i].style.width = (w * 100) + '%';
+      acc += weights[i];
+    }
+    tc.textContent = fmt(p * total) + ' / ' + fmt(total);
+  }
+  function tick(t) {
+    if (!playing) return;
+    var dt = (t - last) / 1000;
+    last = t;
+    p += dt / 24;
+    if (p >= 1) p = 0;
+    render();
+    requestAnimationFrame(tick);
+  }
+  render();
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    playBtn.disabled = true;
+    playBtn.setAttribute('aria-label', 'Pleyer harakatsiz');
+  } else {
+    playBtn.addEventListener('click', function () {
+      playing = !playing;
+      iPlay.hidden = playing;
+      iPause.hidden = !playing;
+      playBtn.setAttribute('aria-label', playing ? 'Pleyerni to‘xtatish' : 'Pleyerni ishga tushirish');
+      if (playing) {
+        last = performance.now();
+        requestAnimationFrame(tick);
+      }
+    });
+  }
+
+  /* copy buttons */
+  var toast = document.getElementById('toast');
+  var timer;
+  function say(msg) {
+    toast.textContent = msg;
+    toast.hidden = false;
+    clearTimeout(timer);
+    timer = setTimeout(function () { toast.hidden = true; }, 2400);
+  }
+  function selectText(el) {
+    var r = document.createRange();
+    r.selectNodeContents(el);
+    var s = window.getSelection();
+    s.removeAllRanges();
+    s.addRange(r);
+  }
+  document.querySelectorAll('[data-copy]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = document.getElementById(btn.getAttribute('data-target'));
+      function fail() {
+        if (target) selectText(target);
+        say('Matn belgilandi. Nusxalash uchun Ctrl+C bosing.');
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(btn.getAttribute('data-copy')).then(function () { say('Nusxalandi'); }, fail);
+      } else {
+        fail();
+      }
+    });
+  });
+})();
+</script>
+
+</body></html>
